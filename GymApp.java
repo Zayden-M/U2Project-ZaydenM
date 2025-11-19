@@ -36,11 +36,15 @@ public class GymApp
         requiredCal = 2000 +  calBurnDaily;
     }
 
-    String returnString= "Your weight in calories is " + ogCalCount +" and your Basal Metabolic Rate is " + (bmr * intensityFactor);
+    String returnString= "Your weight in calories is " + ogCalCount +" and your Basal Metabolic Rate is " + (int)(bmr)+ "your TDEE is " + (int)(bmr * intensityFactor)+ ", to gain 5 pounds in 1 month eat" + (int)(bmr * intensityFactor + 500) +" calories each day." ;
 
     //(2.7cal is burned by pound)
 
 return returnString;
 }
+
+    public String gymFood() {
+
+    }
 
 }
