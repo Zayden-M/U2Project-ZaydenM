@@ -43,8 +43,43 @@ public class GymApp
 return returnString;
 }
 
-    public String gymFood() {
+    public String gymFood(String gymOrFood)
+    {String choice = "";
+        {
+            if (gymOrFood.equals("gym"))
+            {
+                choice = "legs, torso, or arms?";
 
+            }
+
+            if (gymOrFood.equals("food"))
+            {
+                choice = "How many pounds do you want to gain or lose (ie.  10 or -10)" + " In how many weeks do you want this change";
+
+            }
+        }
+        return choice ;
+
+    }
+    public String gymChoice(String bodyFunction, String bOrF)
+    {
+
+        if (bodyFunction.equals("legs"))
+        {
+
+        }
+
+        if (bodyFunction.equals("torso"))
+        {
+
+        }
+
+        if (bodyFunction.equals("arms"))
+        {
+
+        }
+
+return null;
     }
 
 }
