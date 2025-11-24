@@ -1,4 +1,7 @@
+import java.util.Random;
+
 public class GymApp
+
 {
     double ogCalCount = 0;
     double bmr = 0;
@@ -61,22 +64,46 @@ return returnString;
         return choice ;
 
     }
-    public String gymChoice(String bodyFunction, String bOrF)
+    public String foodChoice(String weightLsOrGn, int NumOfWeeks)
     {
+
+        return null;
+    }
+    public String gymChoice(String bodyFunction, String bOrF)
+    {double randomChoice=Math.random() * 100 ;
+        double secondRandomChoice=Math.random() * 100 ;
 
         if (bodyFunction.equals("legs"))
         {
+            if (bOrF.equals("free")) {
+
+            }
+            if (bOrF.equals("body")) {
+
+            }
 
         }
 
         if (bodyFunction.equals("torso"))
         {
+            if (bOrF.equals("free")) {
 
+            }
+            if (bOrF.equals("body")) {
+
+            }
         }
 
         if (bodyFunction.equals("arms"))
         {
+            if (bOrF.equals("free"))
+            {
 
+            }
+            if (bOrF.equals("body"))
+            {
+
+            }
         }
 
 return null;

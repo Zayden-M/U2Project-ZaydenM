@@ -2,6 +2,8 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        double  randomChoice=Math.random() * 100;
+        System.out.println((int)randomChoice);
         Scanner scanner = new Scanner(System.in);
         System.out.println("BodyWeight(Nearest lb )");
         int ogBodyweight = scanner.nextInt();
@@ -24,36 +26,26 @@ public class Main {
 
         System.out.println("Gym or Food plan? (gym or food)");
         String gymOrFoo =  scanner.nextLine();
-        System.out.println(" ");
-        GymApp subjectZaydenGorF = new GymApp();
-        String f =subjectZaydenGorF.gymFood(gymOrFoo);
+
+        String f =subjectZayden.gymFood(gymOrFoo);
         System.out.println(f);
         String targetChoice = scanner.nextLine();
-        String bodyOrFree="";
 
-        if (targetChoice.equals("legs")||targetChoice.equals("torso")||targetChoice.equals("arms"))
-        {
+
+
+
+        if (gymOrFoo.equals("gym")) {
+
+
             System.out.println("Body weight or free weight?(body or free)");
-            String bodyFree= scanner.nextLine();
-        if (bodyFree.equals("body"))
-        {
-         bodyOrFree= "body";
-        }
-            if (bodyFree.equals("free"))
-            {
-                bodyOrFree= "free";
-            }
-            GymApp subjectZaydenGym = new GymApp();
-            String g =subjectZaydenGorF.gymChoice(gymOrFoo);
+            String bodyFree = scanner.nextLine();
+
+
+            String g = subjectZayden.gymChoice(targetChoice, bodyFree);
             System.out.println(g);
 
+
         }
-
-
-
-
-
-
     }
 
 
