@@ -71,22 +71,73 @@ return returnString;
     }
     public String gymChoice(String bodyFunction, String bOrF)
     {double randomChoice=Math.random() * 100 ;
-        double secondRandomChoice=Math.random() * 100 ;
+        String exersize = "";
 
         if (bodyFunction.equals("legs"))
         {
-            if (bOrF.equals("free")) {
+            if (bOrF.equals("free"))
+            {
+                if (randomChoice>75)
+                {
+                 exersize = "Romanian Deadlift";
+                }
+                else if (randomChoice>50)
+                {
+                    exersize = "Dumbbell calf raises";
+                }
+                else if (randomChoice>25)
+                {
+                    exersize = "Goblet squat";
+                }
+                else if (randomChoice>0);
+                {
+                    exersize = "Isometric Deadlift";
+                }
 
             }
-            if (bOrF.equals("body")) {
-
+            if (bOrF.equals("body"))
+            {
+                if (randomChoice>75)
+                {
+                    exersize = "Glute Bridges";
+                }
+                else if (randomChoice>50)
+                {
+                    exersize = "Pistol Squats";
+                }
+                else if (randomChoice>25)
+                {
+                    exersize = "Reverse Lunges";
+                }
+                else if (randomChoice>0);
+                {
+                    exersize = "Step Ups";
+                }
             }
 
         }
 
         if (bodyFunction.equals("torso"))
         {
-            if (bOrF.equals("free")) {
+            if (bOrF.equals("free"))
+            {
+
+                if (randomChoice>75)
+                {
+                    exersize = "Dumbbell Bench press";
+                }
+                else if (randomChoice>50)
+                {
+                    exersize = "Bent-over Rows";
+                }
+                else if (randomChoice>25)
+                {
+                    exersize = "Weighted russian twists";
+                }
+                else if (randomChoice>0);
+                {
+                    exersize = "Weighted Dead bug";
+                }
 
             }
             if (bOrF.equals("body")) {
