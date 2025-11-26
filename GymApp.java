@@ -39,12 +39,13 @@ public class GymApp
         requiredCal = 2000 +  calBurnDaily;
     }
 
-    String returnString= "Your weight in calories is " + ogCalCount +" and your Basal Metabolic Rate is " + (int)(bmr)+ "your TDEE is " + (int)(bmr * intensityFactor)+ ", to gain 5 pounds in 1 month eat" + (int)(bmr * intensityFactor + 500) +" calories each day." ;
+    String returnString= "Your weight in calories is " + ogCalCount +" and your Basal Metabolic Rate is " + (int)(bmr)+ " your TDEE is " + (int)(bmr * intensityFactor)+ ", to gain 5 pounds in 1 month eat " + (int)(bmr * intensityFactor + 500) +" calories each day." ;
 
     //(2.7cal is burned by pound)
 
 return returnString;
 }
+
 
     public String gymFood(String gymOrFood)
     {String choice = "";
@@ -64,10 +65,20 @@ return returnString;
         return choice ;
 
     }
-    public String foodChoice(String weightLsOrGn, int NumOfWeeks)
+    public String foodChoice(int weightLsOrGn, int numOfWeeks)
     {
+        int calChange = weightLsOrGn * 3500;
+        int changePerWeek = calChange / numOfWeeks;
+        int stand = changePerWeek + (((int)(bmr * intensityFactor) * 7 ) * numOfWeeks);
+        String foodFin = "";
+        if (stand>(int)(bmr * intensityFactor))
+        {
+         foodFin = "If you want to gain weight, eat more frequent, eat about "+ stand +" calories weekly";
+        }
+        if (stand<(int)(bmr * intensityFactor))
+        {
 
-        return null;
+        }
     }
     public String gymChoice(String bodyFunction, String bOrF)
     {double randomChoice=Math.random() * 100 ;
@@ -89,7 +100,7 @@ return returnString;
                 {
                     exersize = "Goblet squat";
                 }
-                else if (randomChoice>0);
+                else if (randomChoice>0)
                 {
                     exersize = "Isometric Deadlift";
                 }
@@ -109,7 +120,7 @@ return returnString;
                 {
                     exersize = "Reverse Lunges";
                 }
-                else if (randomChoice>0);
+                else if (randomChoice>0)
                 {
                     exersize = "Step Ups";
                 }
@@ -134,13 +145,31 @@ return returnString;
                 {
                     exersize = "Weighted russian twists";
                 }
-                else if (randomChoice>0);
+                else if (randomChoice>0)
                 {
                     exersize = "Weighted Dead bug";
                 }
 
             }
             if (bOrF.equals("body")) {
+
+                if (randomChoice>75)
+                {
+                    exersize = "Plank";
+                }
+                else if (randomChoice>50)
+                {
+                    exersize = "Flutter kicks";
+                }
+                else if (randomChoice>25)
+                {
+                    exersize = "Diamond push-ups";
+                }
+                else if (randomChoice>0)
+                {
+                    exersize = "Decline push-ups";
+                }
+
 
             }
         }
@@ -150,14 +179,49 @@ return returnString;
             if (bOrF.equals("free"))
             {
 
+                if (randomChoice>75)
+                {
+                    exersize = "Hammer curls";
+                }
+                else if (randomChoice>50)
+                {
+                    exersize = "Over head triceps extension";
+                }
+                else if (randomChoice>25)
+                {
+                    exersize = "Dumbbell Shoulder press";
+                }
+                else if (randomChoice>0)
+                {
+                    exersize = "Weighted Dead bug";
+                }
+
             }
             if (bOrF.equals("body"))
             {
 
+                if (randomChoice>75)
+                {
+                    exersize = "Dips";
+                }
+                else if (randomChoice>50)
+                {
+                    exersize = "Pull ups";
+                }
+                else if (randomChoice>25)
+                {
+                    exersize = "Body weight rows";
+                }
+                else if (randomChoice>0)
+                {
+                    exersize = "Weighted Dead bug";
+                }
+
+
             }
         }
-
-return null;
+String expectReturn = "if you want to train your " + bodyFunction +" using " + bOrF + " try doing "+ exersize;
+return expectReturn ;
     }
 
 }
